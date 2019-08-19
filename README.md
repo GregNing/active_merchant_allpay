@@ -14,7 +14,7 @@ It has been tested on Rails 4.2 successfully.
 
 Add this line to your application's Gemfile:
 ``` Gemfile
-gem 'active_merchant_allpay', github: 'imgarylai/active_merchant_allpay'
+gem 'active_merchant_allpay', github: 'gregning/active_merchant_allpay'
 ```
 And then execute:
 ```sh
