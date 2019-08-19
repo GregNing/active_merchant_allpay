@@ -32,20 +32,6 @@ module OffsitePayments #:nodoc:
       mattr_accessor :hash_iv
       mattr_accessor :debug
 
-      def self.service_url
-        mode = ActiveMerchant::Billing::Base.mode
-        case mode
-          when :production
-            'https://payment.allpay.com.tw/Cashier/AioCheckOut'
-          when :development
-            'http://payment-stage.allpay.com.tw/Cashier/AioCheckOut'
-          when :test
-            'http://payment-stage.allpay.com.tw/Cashier/AioCheckOut'
-          else
-            raise StandardError, "Integration mode set to an invalid value: #{mode}"
-        end
-      end
-
       def self.notification(post)
         Notification.new(post)
       end
